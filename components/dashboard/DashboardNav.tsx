@@ -43,15 +43,6 @@ export default function DashboardNav({ profile, userEmail }: Props) {
   const NavContent = () => (
     <>
       <div className="p-5 border-b border-taxi-blue-muted">
-        <Link href="/" className="flex items-center gap-2 mb-6">
-          <div className="w-8 h-8 bg-taxi-yellow rounded-lg flex items-center justify-center">
-            <Star className="w-4 h-4 text-taxi-blue fill-taxi-blue" />
-          </div>
-          <span className="text-white font-bold text-base">
-            Taxi<span className="text-taxi-yellow">Checker</span>
-          </span>
-        </Link>
-
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-taxi-yellow flex items-center justify-center shrink-0">
             <span className="text-taxi-blue font-bold text-sm">{initials}</span>
@@ -118,10 +109,7 @@ export default function DashboardNav({ profile, userEmail }: Props) {
     <>
       {/* Mobile top bar */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-40 bg-taxi-blue border-b border-taxi-blue-muted flex items-center justify-between px-4 h-14">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="w-7 h-7 bg-taxi-yellow rounded-md flex items-center justify-center">
-            <Star className="w-3.5 h-3.5 text-taxi-blue fill-taxi-blue" />
-          </div>
+        <Link href="/" className="flex items-center">
           <span className="text-white font-bold text-sm">
             Taxi<span className="text-taxi-yellow">Checker</span>
           </span>

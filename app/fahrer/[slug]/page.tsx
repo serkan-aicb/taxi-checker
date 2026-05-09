@@ -74,7 +74,7 @@ async function getDriverData(slug: string): Promise<{
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const data = await getDriverData(slug);
-  if (!data) return { title: "Fahrer nicht gefunden" };
+  if (!data || (data as any).inactive) return { title: "Fahrer nicht gefunden" };
 
   const { driver } = data;
   const fullName = `${driver.first_name} ${driver.last_name}`;

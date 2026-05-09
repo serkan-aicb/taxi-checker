@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X, Star } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -13,12 +13,9 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <Link
             href="/"
-            className="flex items-center gap-2 group"
+            className="flex items-center group"
             aria-label="TaxiChecker Startseite"
           >
-            <div className="w-8 h-8 bg-taxi-yellow rounded-lg flex items-center justify-center group-hover:bg-taxi-yellow-dark transition-colors">
-              <Star className="w-4 h-4 text-taxi-blue fill-taxi-blue" aria-hidden="true" />
-            </div>
             <span className="text-white font-bold text-lg tracking-tight">
               Taxi<span className="text-taxi-yellow">Checker</span>
             </span>
@@ -27,12 +24,6 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-6" aria-label="Hauptnavigation">
             <Link href="/fahrer" className="btn-ghost">
               Fahrer
-            </Link>
-            <Link href="/impressum" className="btn-ghost">
-              Impressum
-            </Link>
-            <Link href="/datenschutz" className="btn-ghost">
-              Datenschutz
             </Link>
           </nav>
 
@@ -57,20 +48,6 @@ export default function Header() {
               onClick={() => setMobileOpen(false)}
             >
               Fahrer entdecken
-            </Link>
-            <Link
-              href="/impressum"
-              className="text-white hover:text-taxi-yellow transition-colors py-2 font-medium"
-              onClick={() => setMobileOpen(false)}
-            >
-              Impressum
-            </Link>
-            <Link
-              href="/datenschutz"
-              className="text-white hover:text-taxi-yellow transition-colors py-2 font-medium"
-              onClick={() => setMobileOpen(false)}
-            >
-              Datenschutz
             </Link>
           </nav>
         )}

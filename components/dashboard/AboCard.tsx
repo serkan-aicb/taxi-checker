@@ -64,8 +64,8 @@ const STATUS_CONFIG: Record<Status, {
 };
 
 const FEATURES = [
-  "Oeffentliches Fahrerprofil auf taxi-checker.de",
-  "Persoenlicher QR-Code fuer Bewertungen",
+  "Öffentliches Fahrerprofil auf taxi-checker.de",
+  "Persönlicher QR-Code für Bewertungen",
   "Alle Bewertungen im Dashboard",
   "Statistiken und Kategorie-Auswertungen",
   "DSGVO-konform und sicher",

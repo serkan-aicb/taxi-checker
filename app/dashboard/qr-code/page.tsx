@@ -11,17 +11,17 @@ const STEPS = [
   {
     n: "1",
     title: "QR-Code herunterladen",
-    body: "Laden Sie das PNG herunter - es ist bereits druckoptimiert mit weissem Rand.",
+    body: "Laden Sie das PNG herunter – es ist bereits druckoptimiert mit weißem Rand.",
   },
   {
     n: "2",
     title: "Ausdrucken & platzieren",
-    body: "Bringen Sie den Code gut sichtbar im Fahrzeug an - z.B. auf der Kopfstuetze oder dem Armaturenbrett.",
+    body: "Bringen Sie den Code gut sichtbar im Fahrzeug an – z.B. auf der Kopfstütze oder dem Armaturenbrett.",
   },
   {
     n: "3",
-    title: "Fahrgaeste einladen",
-    body: "Bitten Sie Fahrgaeste am Ende der Fahrt, den Code zu scannen und eine Bewertung zu hinterlassen.",
+    title: "Fahrgäste einladen",
+    body: "Bitten Sie Fahrgäste am Ende der Fahrt, den Code zu scannen und eine Bewertung zu hinterlassen.",
   },
   {
     n: "4",
@@ -34,7 +34,7 @@ const TIPS = [
   {
     icon: Printer,
     title: "Drucken",
-    body: "Ideal als Aufkleber (5x5 cm) oder auf Visitenkartengroesse.",
+    body: "Ideal als Aufkleber (5x5 cm) oder auf Visitenkartengröße.",
   },
   {
     icon: Smartphone,
@@ -72,7 +72,7 @@ export default async function DashboardQrCodePage() {
         <div className="mb-8">
           <h1 className="text-2xl font-bold text-taxi-blue">Ihr QR-Code</h1>
           <p className="text-gray-500 text-sm mt-1">
-            Teilen Sie Ihren persoenlichen QR-Code mit Fahrgaesten, um Bewertungen zu erhalten.
+            Teilen Sie Ihren persönlichen QR-Code mit Fahrgästen, um Bewertungen zu erhalten.
           </p>
         </div>
         <div className="bg-white rounded-xl shadow-card p-10 text-center max-w-md">
@@ -96,7 +96,7 @@ export default async function DashboardQrCodePage() {
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-taxi-blue">Ihr QR-Code</h1>
         <p className="text-gray-500 text-sm mt-1">
-          Teilen Sie Ihren persoenlichen QR-Code mit Fahrgaesten, um Bewertungen zu erhalten.
+          Teilen Sie Ihren persönlichen QR-Code mit Fahrgästen, um Bewertungen zu erhalten.
         </p>
       </div>
 
