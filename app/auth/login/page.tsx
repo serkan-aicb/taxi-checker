@@ -1,6 +1,5 @@
 import LoginForm from "@/components/auth/LoginForm";
 import Link from "next/link";
-import { Star } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,10 +10,7 @@ export const metadata: Metadata = {
 export default function LoginPage() {
   return (
     <div className="min-h-screen bg-taxi-blue flex flex-col items-center justify-center px-4 py-12">
-      <Link href="/" className="flex items-center gap-2 mb-10">
-        <div className="w-9 h-9 bg-taxi-yellow rounded-lg flex items-center justify-center">
-          <Star className="w-4 h-4 text-taxi-blue fill-taxi-blue" />
-        </div>
+      <Link href="/" className="flex items-center mb-10">
         <span className="text-white font-bold text-xl">
           Taxi<span className="text-taxi-yellow">Checker</span>
         </span>
