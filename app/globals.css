@@ -2,26 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --taxi-yellow: #FFC107;
+  --taxi-blue: #0D1B2A;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #0D1B2A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-taxi-yellow hover:bg-taxi-yellow-dark text-taxi-blue font-semibold px-6 py-3 rounded-lg transition-all duration-200 inline-flex items-center gap-2 text-sm;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-taxi-yellow text-taxi-yellow hover:bg-taxi-yellow hover:text-taxi-blue font-semibold px-6 py-3 rounded-lg transition-all duration-200 inline-flex items-center gap-2 text-sm;
+  }
+
+  .btn-ghost {
+    @apply text-white hover:text-taxi-yellow transition-colors duration-200 font-medium text-sm;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-card hover:shadow-card-hover transition-shadow duration-300 overflow-hidden;
+  }
+
+  .card-dark {
+    @apply bg-taxi-blue-light rounded-xl shadow-card hover:shadow-card-hover transition-shadow duration-300 overflow-hidden;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-taxi-yellow focus:ring-2 focus:ring-taxi-yellow/20 outline-none transition-all duration-200 text-sm bg-white;
+  }
+
+  .star-filled {
+    @apply text-taxi-yellow fill-taxi-yellow;
+  }
+
+  .star-empty {
+    @apply text-gray-300;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold text-taxi-blue;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }
